@@ -19,7 +19,32 @@ body p {
   font-size: 16px;
 }
 
+.container {
+  background-color: #ffffff;
+  width: 30%;
+}
+
+.card {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid black;
+  text-align: center;
+}
+
+.card .image {
+  width: 100%;
+}
+
+.card .card-button {
+  background-color: #3829e0;
+  padding: 10px 35px;
+  width: 70%;
+  border-radius: 10px;
+  text-align: center;
+}
+
 .attribution {
+  margin-top: 100px;
   font-size: 11px;
   text-align: center;
 }
