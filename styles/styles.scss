@@ -3,3 +3,22 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    background-color: hsl(225, 100%, 94%);
+    height: 100vw;
+    width: 100vw;
+    font-family: Red Hat Display,Arial, Helvetica, sans-serif;
+    p {
+        font-size: 16px;
+    }
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+      }
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
