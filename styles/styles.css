@@ -12,6 +12,7 @@ body {
   background-color: #e0e8ff;
   height: 100vw;
   width: 100vw;
+  overflow: hidden;
   font-family: Red Hat Display,Arial, Helvetica, sans-serif;
 }
 
@@ -20,19 +21,25 @@ body p {
 }
 
 .container {
-  background-color: #ffffff;
+  position: absolute;
+  top: 10%;
+  left: 35%;
   width: 30%;
 }
 
 .card {
   width: 100%;
-  border-radius: 10px;
-  border: 2px solid black;
   text-align: center;
 }
 
-.card .image {
+.card .card-summary {
+  background-color: #ffffff;
+}
+
+.card .image img {
   width: 100%;
+  border-radius: 20px 20px 0 0;
+  background-color: transparent;
 }
 
 .card .card-button {
@@ -44,7 +51,9 @@ body p {
 }
 
 .attribution {
-  margin-top: 100px;
+  position: absolute;
+  top: 90%;
+  left: 41%;
   font-size: 11px;
   text-align: center;
 }
