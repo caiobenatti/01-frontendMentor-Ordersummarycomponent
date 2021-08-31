@@ -31,7 +31,8 @@ body {
 .card .image img {
   width: 100%;
   border-radius: 20px 20px 0 0;
-  background-color: transparent;
+  padding: 0;
+  background-color: linear-gradient(transparent, #ffffff);
 }
 
 .card .card-title {
@@ -119,6 +120,10 @@ body {
   border-radius: 10px;
   text-align: center;
   font-size: 1.25rem;
+}
+
+.card .card-button:hover {
+  background-color: #1f2f56;
 }
 
 .card .card-cancel {
