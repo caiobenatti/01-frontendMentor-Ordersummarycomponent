@@ -1,51 +1,54 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
+html {
+  font-size: 65%;
+}
+
 body {
-  background-image: url(../images/pattern-background-desktop.svg);
+  font-family: 'Red Hat Display', sans-serif;
+  background-image: url("../images/pattern-background-desktop.svg");
   background-repeat: no-repeat;
-  background-size: 100vw;
+  background-size: contain;
   background-color: #e0e8ff;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
 }
 
 .container {
-  position: absolute;
-  top: 10%;
-  left: 35%;
-  width: 30%;
-  -webkit-box-shadow: 10px 0px 5px #e0e8ff;
-          box-shadow: 10px 0px 5px #e0e8ff;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.card {
-  width: 100%;
-  text-align: center;
-}
-
-.card .image img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  border-radius: 20px 20px 0 0;
-  padding: 0;
-}
-
-.card .card-title {
-  margin-top: 1.5rem;
-  font-size: 2.2rem;
-  font-weight: 900;
-  font-family: Red Hat Display;
-}
-
-.card .card-main {
+.container .card {
+  width: 88%;
+  max-width: 475px;
+  margin-top: 6rem;
   background-color: #ffffff;
+  border-radius: 2rem;
+}
+
+.container .card .image {
+  width: 100%;
+  border-radius: 2rem 2rem 0 0;
+}
+
+.container .card .card-main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -56,109 +59,128 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 0 5% 0;
-  border-radius: 0 0 15px 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 3rem;
 }
 
-.card .card-summary-text {
-  padding: 1.5rem 0;
-  width: 60%;
-  font-family: Red Hat Display;
-  font-size: 1.05rem;
+.container .card .card-main .title {
+  color: #1f2f56;
+  font-size: 2.2rem;
+  font-weight: 900;
+}
+
+.container .card .card-main .description {
+  font-size: 1.5rem;
   font-weight: 500;
   color: #7280a7;
+  padding: 1.6rem 1rem;
+  line-height: 2.4rem;
+  text-align: center;
 }
 
-.card .card-plan {
-  width: 70%;
-  display: -ms-inline-grid;
-  display: inline-grid;
-  -ms-grid-columns: 50px 120px 1fr;
-      grid-template-columns: 50px 120px 1fr;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
-      grid-template-areas: header main main footer;
-  padding: 1rem 1rem;
+.container .card .card-main .plan-card {
   background-color: #f5f7ff;
-  border-radius: 15px;
-  font-family: Red Hat Display;
-  font-size: 1.0rem;
+  width: 100%;
+  border-radius: 1.5rem;
+  margin: 0.75rem 0;
+  padding: 1.6rem 1.1rem;
 }
 
-.card .card-plan .text-1 {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+.container .card .card-main .plan-card .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 2rem;
+}
+
+.container .card .card-main .plan-card .payment {
+  color: #1f2f56;
+  font-size: 1.4rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+
+.container .card .card-main .plan-card .price {
   color: #7280a7;
-  font-weight: 500;
+  font-size: 1.4rem;
+  font-weight: 700;
+  opacity: 0.5;
 }
 
-.card .card-plan .text-1 .text-1-1 {
-  color: #000000;
+.container .card .card-main .plan-card a {
+  color: #3829e0;
+  font-size: 1.3rem;
   font-weight: 700;
 }
 
-.card .card-plan .text-2 {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -ms-grid-column-align: end;
-      justify-self: end;
-  font-weight: 900;
-  padding-right: 1rem;
+.container .card .card-main .plan-card a:hover {
+  text-decoration: none;
+  opacity: 0.75;
 }
 
-.card .card-plan .text-2 a {
-  color: #3829e0;
-}
-
-.card .card-button {
-  margin: 1.5rem 0;
-  background-color: #3829e0;
-  padding: 1rem 2rem;
-  width: 70%;
-  color: #ffffff;
-  font-weight: 900;
-  border-radius: 10px;
+.container .card .card-main .card-button {
+  width: 100%;
   text-align: center;
-  font-size: 1.25rem;
+  background-color: #3829e0;
+  padding: 1.5rem;
+  margin: 1.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  -webkit-box-shadow: 0 10px 20px rgba(56, 41, 224, 0.15), 0 15px 30px rgba(56, 41, 224, 0.15);
+          box-shadow: 0 10px 20px rgba(56, 41, 224, 0.15), 0 15px 30px rgba(56, 41, 224, 0.15);
 }
 
-.card .card-button:hover {
-  background-color: #1f2f56;
+.container .card .card-main .card-button:hover {
+  opacity: 0.6;
 }
 
-.card .card-cancel {
-  font-family: Red Hat Display;
-  font-size: 1.0rem;
-  font-weight: 900;
+.container .card .card-main .card-button a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.container .card .card-main .card-cancel {
+  padding: 1rem;
+}
+
+.container .card .card-main .card-cancel a {
   color: #7280a7;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.container .card .card-main .card-cancel a:hover {
+  color: #1f2f56;
 }
 
 .attribution {
-  position: absolute;
-  top: 90%;
-  left: 43%;
   font-size: 11px;
   text-align: center;
+  margin-top: 2rem;
 }
 
 .attribution a {
   color: #3e52a3;
 }
 
-@media only screen and (max-width: 768px) {
-  .container {
-    overflow-y: scroll;
-    width: 90%;
-    left: 5%;
-  }
-  .card .card-plan {
-    display: block;
-  }
-  .attribution {
-    top: 95%;
-    left: 20%;
+@media screen and (max-width: 764px) {
+  body {
+    background-image: url("../images/pattern-background-mobile.svg");
   }
 }
 /*# sourceMappingURL=styles.css.map */
