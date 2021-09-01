@@ -24,11 +24,12 @@ body{
     text-align: center;
 
     .image img {
+        display: block;
         width: 100%;
+        height: 100%;
         border-radius: 20px 20px 0 0; 
         padding: 0;
-        background-color: linear-gradient(transparent, #ffffff);
-    }
+        }
 
     .card-title {
         margin-top: 1.5rem;
@@ -57,7 +58,7 @@ body{
     .card-plan {
         width: 70%;
         display: inline-grid;
-        grid-template-columns: 50px 150px 1fr;
+        grid-template-columns: 50px 120px 1fr;
         grid-template-rows:auto;
         grid-template-areas: header main main footer;
         
@@ -67,7 +68,7 @@ body{
         background-color:hsl(225, 100%, 98%) ;
         border-radius: 15px;
          font-family: Red Hat Display;
-        font-size: 1.05rem;
+        font-size: 1.0rem;
         .img {
             }
         .text-1 {
@@ -124,4 +125,18 @@ font-weight: 700;
       }
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+    width: 90%;
+    left: 5%;
+}
+.card .card-plan {
+    display: block;
+}
+.attribution {
+    top: 95%;
+    left: 20%;
+   }
 }
